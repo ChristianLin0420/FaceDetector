@@ -15,6 +15,8 @@
 		AA50411024B177EB00DF94F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA50410E24B177EB00DF94F9 /* LaunchScreen.storyboard */; };
 		AA50411B24B177EB00DF94F9 /* FaceDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA50411A24B177EB00DF94F9 /* FaceDetectorTests.swift */; };
 		AA50412624B177EC00DF94F9 /* FaceDetectorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA50412524B177EC00DF94F9 /* FaceDetectorUITests.swift */; };
+		AA50413424B1781100DF94F9 /* Faces.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA50413324B1781100DF94F9 /* Faces.swift */; };
+		AA50413624B17D6200DF94F9 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA50413524B17D6200DF94F9 /* Views.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		AA50412124B177EC00DF94F9 /* FaceDetectorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceDetectorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA50412524B177EC00DF94F9 /* FaceDetectorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetectorUITests.swift; sourceTree = "<group>"; };
 		AA50412724B177EC00DF94F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA50413324B1781100DF94F9 /* Faces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faces.swift; sourceTree = "<group>"; };
+		AA50413524B17D6200DF94F9 /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				AA50410324B177E200DF94F9 /* AppDelegate.swift */,
 				AA50410524B177E200DF94F9 /* SceneDelegate.swift */,
 				AA50410724B177E200DF94F9 /* ContentView.swift */,
+				AA50413324B1781100DF94F9 /* Faces.swift */,
+				AA50413524B17D6200DF94F9 /* Views.swift */,
 				AA50410924B177EB00DF94F9 /* Assets.xcassets */,
 				AA50410E24B177EB00DF94F9 /* LaunchScreen.storyboard */,
 				AA50411124B177EB00DF94F9 /* Info.plist */,
@@ -267,8 +273,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA50413424B1781100DF94F9 /* Faces.swift in Sources */,
 				AA50410424B177E200DF94F9 /* AppDelegate.swift in Sources */,
 				AA50410624B177E200DF94F9 /* SceneDelegate.swift in Sources */,
+				AA50413624B17D6200DF94F9 /* Views.swift in Sources */,
 				AA50410824B177E200DF94F9 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,7 +454,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = BJLin.FaceDetector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -466,7 +474,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = BJLin.FaceDetector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
