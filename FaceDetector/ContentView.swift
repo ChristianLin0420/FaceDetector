@@ -1,11 +1,3 @@
-//
-//  ContentView.swift
-//  FaceDetector
-//
-//  Created by Christian on 2020/7/5.
-//  Copyright © 2020 Christian. All rights reserved.
-//
-
 import SwiftUI
 import Vision
 
@@ -15,7 +7,6 @@ struct ContentView: View {
     @State private var image: UIImage? = nil
     @State private var faces: [VNFaceObservation]? = nil
     
-    // BEGIN FD_starter_cv_2_a
     private var faceCount: Int { return faces?.count ?? 0 }
     private let placeholderImage = UIImage(named: "placeholder")!
     
@@ -31,6 +22,7 @@ struct ContentView: View {
         return mainView()
     }
     
+    // BEGIN FD_complete_getFaces_change
     private func getFaces() {
         print("Getting faces...")
         self.faces = []
@@ -43,6 +35,7 @@ struct ContentView: View {
             }
         }
     }
+    // END FD_complete_getFaces_change
     
     private func controlReturned(image: UIImage?) {
         print("Image return \(image == nil ? "failure" : "success")...")
@@ -81,7 +74,8 @@ extension ContentView {
                 },
                 trailing: Button(action: summonCamera) {
                     Image(systemName: "camera")
-                }.disabled(!cameraEnabled)
+                }
+                .disabled(!cameraEnabled)
             )
         })
     }
@@ -99,13 +93,12 @@ extension ContentView {
             self.cameraOpen = false
         })
     }
-
 }
 
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().previewDevice(PreviewDevice(rawValue: "iPhone XS Max"))
     }
 }
 #endif

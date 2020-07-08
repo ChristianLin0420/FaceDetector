@@ -12,12 +12,10 @@ struct MainView: View {
     private let image: UIImage
     private let text: String
     private let button: TwoStateButton
-
+    
     var body: some View {
         VStack {
-            Image(uiImage: image)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
+            Image(uiImage: image).resizable().aspectRatio(contentMode: .fit)
             Spacer()
             Text(text).font(.title).bold()
             Spacer()
@@ -32,7 +30,6 @@ struct MainView: View {
     }
 }
 
-
 struct TwoStateButton: View {
     private let text: String
     private let disabled: Bool
@@ -45,22 +42,18 @@ struct TwoStateButton: View {
                 Spacer()
                 Text(text).font(.title).bold().foregroundColor(.white)
                 Spacer()
-            }.padding().background(background).cornerRadius(10)
-        }.disabled(disabled)
+                }.padding().background(background).cornerRadius(10)
+            }.disabled(disabled)
     }
     
-    init(text: String,
-         disabled: Bool,
-         background: Color = .blue,
-         action: @escaping () -> Void) {
-        
+    init(text: String, disabled: Bool, background: Color = .blue, action: @escaping () -> Void) {
         self.text = text
         self.disabled = disabled
         self.background = disabled ? .gray : background
         self.action = action
     }
 }
-
+    
 struct ImagePicker: UIViewControllerRepresentable {
     typealias UIViewControllerType = UIImagePickerController
     private(set) var selectedImage: UIImage?
@@ -78,23 +71,16 @@ struct ImagePicker: UIViewControllerRepresentable {
         return coordinator
     }
     
-    func makeUIViewController(context: Context)
-        -> UIImagePickerController {
-            
+    func makeUIViewController(context: Context) -> UIImagePickerController {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = context.coordinator
-        imagePickerController.sourceType =
-            cameraSource ? .camera : .photoLibrary
-
+        imagePickerController.sourceType = cameraSource ? .camera : .photoLibrary
         return imagePickerController
     }
     
-    func updateUIViewController(
-        _ uiViewController: UIImagePickerController, context: Context) {}
+    func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {}
     
-    class Coordinator: NSObject, UIImagePickerControllerDelegate,
-        UINavigationControllerDelegate {
-            
+    class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         var parent: ImagePicker
         var completion: ((UIImage?) -> ())?
         
@@ -102,23 +88,14 @@ struct ImagePicker: UIViewControllerRepresentable {
             self.parent = imagePickerControllerWrapper
         }
         
-        func imagePickerController(_ picker: UIImagePickerController,
-            didFinishPickingMediaWithInfo info:
-                [UIImagePickerController.InfoKey: Any]) {
-
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
             print("Image picker complete...")
-
-            let selectedImage =
-                info[UIImagePickerController.InfoKey.originalImage]
-                    as? UIImage
-
+            let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
             picker.dismiss(animated: true)
             completion?(selectedImage)
         }
         
-        func imagePickerControllerDidCancel(
-                _ picker: UIImagePickerController) {
-
+        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
             print("Image picker cancelled...")
             picker.dismiss(animated: true)
             completion?(nil)
@@ -137,15 +114,15 @@ extension UIImage {
     
     var cgImageOrientation: CGImagePropertyOrientation {
         switch self.imageOrientation {
-            case .up: return .up
-            case .down: return .down
-            case .left: return .left
-            case .right: return .right
-            case .upMirrored: return .upMirrored
-            case .downMirrored: return .downMirrored
-            case .leftMirrored: return .leftMirrored
-            case .rightMirrored: return .rightMirrored
-            @unknown default: return .up
+        case .up: return .up
+        case .down: return .down
+        case .left: return .left
+        case .right: return .right
+        case .upMirrored: return .upMirrored
+        case .downMirrored: return .downMirrored
+        case .leftMirrored: return .leftMirrored
+        case .rightMirrored: return .rightMirrored
+        @unknown default: return .up
         }
     }
 }
