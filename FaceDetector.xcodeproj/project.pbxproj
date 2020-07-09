@@ -18,6 +18,7 @@
 		AA50413424B1781100DF94F9 /* Faces.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA50413324B1781100DF94F9 /* Faces.swift */; };
 		AA50413624B17D6200DF94F9 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA50413524B17D6200DF94F9 /* Views.swift */; };
 		AA50414A24B4C23F00DF94F9 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA50414924B4C23F00DF94F9 /* MenuView.swift */; };
+		AA67C16B24B7669E00C0AF34 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA67C16A24B7669E00C0AF34 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		AA50413324B1781100DF94F9 /* Faces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faces.swift; sourceTree = "<group>"; };
 		AA50413524B17D6200DF94F9 /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
 		AA50414924B4C23F00DF94F9 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		AA67C16A24B7669E00C0AF34 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				AA50410724B177E200DF94F9 /* ContentView.swift */,
 				AA50413324B1781100DF94F9 /* Faces.swift */,
 				AA50413524B17D6200DF94F9 /* Views.swift */,
+				AA67C16A24B7669E00C0AF34 /* Extension.swift */,
 				AA50410924B177EB00DF94F9 /* Assets.xcassets */,
 				AA50410E24B177EB00DF94F9 /* LaunchScreen.storyboard */,
 				AA50411124B177EB00DF94F9 /* Info.plist */,
@@ -278,6 +281,7 @@
 			files = (
 				AA50413424B1781100DF94F9 /* Faces.swift in Sources */,
 				AA50414A24B4C23F00DF94F9 /* MenuView.swift in Sources */,
+				AA67C16B24B7669E00C0AF34 /* Extension.swift in Sources */,
 				AA50410424B177E200DF94F9 /* AppDelegate.swift in Sources */,
 				AA50410624B177E200DF94F9 /* SceneDelegate.swift in Sources */,
 				AA50413624B17D6200DF94F9 /* Views.swift in Sources */,
